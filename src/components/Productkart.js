@@ -7,10 +7,12 @@ const Productkart = () => {
   const cartItems = useSelector(store=>store.cart.items);
   let itemCount = 0;
   let amount = 0;
-  cartItems.map((item)=>{
-    itemCount+=item.quantity;
-    amount+=(item.quantity*item.price);
-  });
+
+
+cartItems.forEach((item) => {
+  itemCount += item.quantity;
+  amount += item.quantity * item.price;
+});
   return (
     <div className='flex justify-evenly'>
 <div>

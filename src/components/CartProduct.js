@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import {removeItem, addQuantity, removeQuantity} from '../utils/cartSlice';
 
 const CartProduct = (props) => {
 const {title, price, images} = props.cartItem;
 const [quantity, setQuantity] = useState(1);
 console.log(props.cartItem);
-const cartItems = useSelector(store=>store.cart.items);
+// const cartItems = useSelector(store=>store.cart.items);
 const dispatch = useDispatch();
 
 
